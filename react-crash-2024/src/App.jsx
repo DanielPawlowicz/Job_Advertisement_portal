@@ -5,12 +5,14 @@ import MainLayout from './layouts/MainLayout';
 import JobsPage from './pagegs/JobsPage';
 import NotFoundPage from './pagegs/NotFoundPage';
 import JobPage, {jobLoader} from './pagegs/JobPage';
+import AddJobPage from './pagegs/AddJobPage';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<MainLayout />}>
       <Route index element={<HomePage />}/>
       <Route path='/jobs' element={<JobsPage />}/>
+      <Route path='/add-job' element={<AddJobPage />}/>
       <Route path='/jobs/:id' element={<JobPage />} loader={jobLoader}/>
       <Route path='*' element={<NotFoundPage />}/>
     </Route>
